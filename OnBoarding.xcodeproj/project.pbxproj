@@ -13,6 +13,12 @@
 		AAE5B20626014C4D00F115F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE5B20426014C4D00F115F0 /* Main.storyboard */; };
 		AAE5B20826014C4E00F115F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE5B20726014C4E00F115F0 /* Assets.xcassets */; };
 		AAE5B20B26014C4E00F115F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE5B20926014C4E00F115F0 /* LaunchScreen.storyboard */; };
+		AAE5B21B26015A2300F115F0 /* Vista2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE5B21526015A2300F115F0 /* Vista2ViewController.swift */; };
+		AAE5B21C26015A2300F115F0 /* Vista1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE5B21626015A2300F115F0 /* Vista1ViewController.swift */; };
+		AAE5B21D26015A2300F115F0 /* Vista2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE5B21726015A2300F115F0 /* Vista2ViewController.storyboard */; };
+		AAE5B21E26015A2300F115F0 /* Vista1ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE5B21926015A2300F115F0 /* Vista1ViewController.storyboard */; };
+		AAE5B22226015A6300F115F0 /* Vista3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE5B22126015A6300F115F0 /* Vista3ViewController.swift */; };
+		AAE5B22526015A8B00F115F0 /* Vista3ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE5B22426015A8B00F115F0 /* Vista3ViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		AAE5B20726014C4E00F115F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAE5B20A26014C4E00F115F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAE5B20C26014C4E00F115F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE5B21526015A2300F115F0 /* Vista2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vista2ViewController.swift; sourceTree = "<group>"; };
+		AAE5B21626015A2300F115F0 /* Vista1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vista1ViewController.swift; sourceTree = "<group>"; };
+		AAE5B21726015A2300F115F0 /* Vista2ViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vista2ViewController.storyboard; sourceTree = "<group>"; };
+		AAE5B21A26015A2300F115F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Vista1ViewController.storyboard; sourceTree = "<group>"; };
+		AAE5B22126015A6300F115F0 /* Vista3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vista3ViewController.swift; sourceTree = "<group>"; };
+		AAE5B22426015A8B00F115F0 /* Vista3ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Vista3ViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 		AAE5B1FD26014C4D00F115F0 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				AAE5B21426015A2200F115F0 /* VistasContenedor */,
 				AAE5B1FE26014C4D00F115F0 /* AppDelegate.swift */,
 				AAE5B20026014C4D00F115F0 /* SceneDelegate.swift */,
 				AAE5B20226014C4D00F115F0 /* ViewController.swift */,
@@ -65,6 +78,19 @@
 				AAE5B20C26014C4E00F115F0 /* Info.plist */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		AAE5B21426015A2200F115F0 /* VistasContenedor */ = {
+			isa = PBXGroup;
+			children = (
+				AAE5B22126015A6300F115F0 /* Vista3ViewController.swift */,
+				AAE5B21526015A2300F115F0 /* Vista2ViewController.swift */,
+				AAE5B21626015A2300F115F0 /* Vista1ViewController.swift */,
+				AAE5B22426015A8B00F115F0 /* Vista3ViewController.storyboard */,
+				AAE5B21726015A2300F115F0 /* Vista2ViewController.storyboard */,
+				AAE5B21926015A2300F115F0 /* Vista1ViewController.storyboard */,
+			);
+			path = VistasContenedor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +152,10 @@
 			files = (
 				AAE5B20B26014C4E00F115F0 /* LaunchScreen.storyboard in Resources */,
 				AAE5B20826014C4E00F115F0 /* Assets.xcassets in Resources */,
+				AAE5B21D26015A2300F115F0 /* Vista2ViewController.storyboard in Resources */,
+				AAE5B22526015A8B00F115F0 /* Vista3ViewController.storyboard in Resources */,
 				AAE5B20626014C4D00F115F0 /* Main.storyboard in Resources */,
+				AAE5B21E26015A2300F115F0 /* Vista1ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE5B20326014C4D00F115F0 /* ViewController.swift in Sources */,
+				AAE5B21C26015A2300F115F0 /* Vista1ViewController.swift in Sources */,
+				AAE5B22226015A6300F115F0 /* Vista3ViewController.swift in Sources */,
+				AAE5B21B26015A2300F115F0 /* Vista2ViewController.swift in Sources */,
 				AAE5B1FF26014C4D00F115F0 /* AppDelegate.swift in Sources */,
 				AAE5B20126014C4D00F115F0 /* SceneDelegate.swift in Sources */,
 			);
@@ -160,6 +192,14 @@
 				AAE5B20A26014C4E00F115F0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AAE5B21926015A2300F115F0 /* Vista1ViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAE5B21A26015A2300F115F0 /* Base */,
+			);
+			name = Vista1ViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
