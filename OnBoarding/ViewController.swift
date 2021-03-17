@@ -3,7 +3,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contenedor: UIView!
     @IBOutlet weak var pages: UIPageControl!
     @IBOutlet weak var btnContinuar: UIButton!
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         swipe2.direction = .right
         view.addGestureRecognizer(swipe2)
         
-        scrollView.addSubview(vistas[0].view)
+        contenedor.addSubview(vistas[0].view)
         
         btnContinuar.setTitle("Continuar", for: .normal)
         
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         } else {
             btnContinuar.setTitle("Continuar", for: .normal)
         }
-        scrollView.addSubview(vistas[sender.currentPage].view)
+        contenedor.addSubview(vistas[sender.currentPage].view)
     }
     
     @objc private func gestoSwipe(gesto: UITapGestureRecognizer) {
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         if pages.currentPage == 2 {
             btnContinuar.setTitle("Finalizar", for: .normal)
         }
-        scrollView.addSubview(vistas[pages.currentPage].view)
+        contenedor.addSubview(vistas[pages.currentPage].view)
     }
     
     @objc private func gestoSwipeAtras(gesto: UITapGestureRecognizer) {
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         if pages.currentPage != 2 {
             btnContinuar.setTitle("Continuar", for: .normal)
         }
-        scrollView.addSubview(vistas[pages.currentPage].view)
+        contenedor.addSubview(vistas[pages.currentPage].view)
     }
 
     // MARK: Actions
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
         if pages.currentPage == 2 {
             btnContinuar.setTitle("Finalizar", for: .normal)
         }
-        scrollView.addSubview(vistas[pages.currentPage].view)
+        contenedor.addSubview(vistas[pages.currentPage].view)
     }
     
 }

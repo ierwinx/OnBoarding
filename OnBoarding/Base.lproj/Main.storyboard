@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFh-yQ-Vuk">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hil-PF-PsN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </scrollView>
+                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpn-By-cv1">
                                 <rect key="frame" x="50" y="742" width="314" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,22 +50,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iFh-yQ-Vuk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5Ah-CY-hWK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c6U-pX-rhD" secondAttribute="trailing" constant="20" id="9XZ-d4-3jh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c6U-pX-rhD" secondAttribute="bottom" constant="20" id="FNX-SA-EhF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpn-By-cv1" secondAttribute="trailing" constant="50" id="Gtm-xD-aRA"/>
-                            <constraint firstItem="iFh-yQ-Vuk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KFp-73-3Wu"/>
-                            <constraint firstItem="iFh-yQ-Vuk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gg3-bk-6Hp"/>
+                            <constraint firstItem="hil-PF-PsN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MGx-KE-0Km"/>
+                            <constraint firstItem="hil-PF-PsN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cs4-Nw-B7z"/>
+                            <constraint firstAttribute="bottom" secondItem="hil-PF-PsN" secondAttribute="bottom" id="h0o-eX-xN9"/>
+                            <constraint firstItem="hil-PF-PsN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h3p-9r-4QP"/>
                             <constraint firstItem="c6U-pX-rhD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i00-2F-VCc"/>
                             <constraint firstItem="mpn-By-cv1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="k78-To-m3z"/>
                             <constraint firstItem="c6U-pX-rhD" firstAttribute="top" secondItem="mpn-By-cv1" secondAttribute="bottom" constant="20" id="lv4-k3-4IW"/>
-                            <constraint firstAttribute="bottom" secondItem="iFh-yQ-Vuk" secondAttribute="bottom" id="rYb-3n-QsP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnContinuar" destination="mpn-By-cv1" id="NZw-zN-dxw"/>
+                        <outlet property="contenedor" destination="hil-PF-PsN" id="aBP-GE-JGh"/>
                         <outlet property="pages" destination="c6U-pX-rhD" id="vgU-yt-CWx"/>
-                        <outlet property="scrollView" destination="iFh-yQ-Vuk" id="HJe-dc-VOk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
