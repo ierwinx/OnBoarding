@@ -41,13 +41,18 @@ class ViewController: UIViewController {
         swipe2.direction = .right
         view.addGestureRecognizer(swipe2)
         
-        contenedor.addSubview(vistas[0].view)
-        
         btnContinuar.setTitle("Continuar", for: .normal)
         
         pages.numberOfPages = vistas.count
         pages.addTarget(self, action: #selector(pageControl(sender:)), for: .valueChanged)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        contenedor.addSubview(vistas[0].view)
+    }
+    
     
     // MARK: Private Methods
     @objc private func pageControl(sender: UIPageControl) {
