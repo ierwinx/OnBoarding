@@ -8,22 +8,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnContinuar: UIButton!
     
     // MARK: Properties
-    private lazy var vista1ViewController: Vista1ViewController = {
-        let storyboard = UIStoryboard(name: "Vista1ViewController", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "vista1ViewController") as! Vista1ViewController
-        return viewController
-    }()
-    private lazy var vista2ViewController: Vista2ViewController = {
-        let storyboard = UIStoryboard(name: "Vista2ViewController", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "vista2ViewController") as! Vista2ViewController
-        return viewController
-    }()
-    private lazy var vista3ViewController: Vista3ViewController = {
-        let storyboard = UIStoryboard(name: "Vista3ViewController", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "vista3ViewController") as! Vista3ViewController
-        return viewController
-    }()
-    private lazy var vistas = [vista1ViewController, vista2ViewController, vista3ViewController]
+    private lazy var vistas = [Vista1ViewController.getController(), Vista2ViewController.getController(), Vista3ViewController.getController()]
+    private var iCurrentView = 0
     
     // MARK: Ciclo de vida
     override func viewDidLoad() {
@@ -49,10 +35,29 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        contenedor.addSubview(vistas[0].view)
+        showView(iView: 0)
     }
     
+    private func showView(iView: Int) {
+        let vista = vistas[iView]
+        vista.view.frame = CGRect(x: 0, y: 0, width: contenedor.frame.width, height: contenedor.frame.height)
+        contenedor.addSubview(vista.view)
+        addChild(vista)
+        vista.didMove(toParent: self)
+    }
+    
+    private func removeView(iView: Int) {
+        let vista = vistas[iView]
+        vista.willMove(toParent: nil)
+        vista.removeFromParent()
+        vista.view.removeFromSuperview()
+    }
+    
+    private func setNewView(iNewView: Int) {
+        removeView(iView: iCurrentView)
+        iCurrentView = iNewView
+        showView(iView: iCurrentView)
+    }
     
     // MARK: Private Methods
     @objc private func pageControl(sender: UIPageControl) {
@@ -61,7 +66,7 @@ class ViewController: UIViewController {
         } else {
             btnContinuar.setTitle("Continuar", for: .normal)
         }
-        contenedor.addSubview(vistas[sender.currentPage].view)
+        setNewView(iNewView: sender.currentPage)
     }
     
     @objc private func gestoSwipe(gesto: UITapGestureRecognizer) {
@@ -69,7 +74,7 @@ class ViewController: UIViewController {
         if pages.currentPage == 2 {
             btnContinuar.setTitle("Finalizar", for: .normal)
         }
-        contenedor.addSubview(vistas[pages.currentPage].view)
+        setNewView(iNewView: pages.currentPage)
     }
     
     @objc private func gestoSwipeAtras(gesto: UITapGestureRecognizer) {
@@ -77,7 +82,7 @@ class ViewController: UIViewController {
         if pages.currentPage != 2 {
             btnContinuar.setTitle("Continuar", for: .normal)
         }
-        contenedor.addSubview(vistas[pages.currentPage].view)
+        setNewView(iNewView: pages.currentPage)
     }
 
     // MARK: Actions
@@ -86,7 +91,7 @@ class ViewController: UIViewController {
         if pages.currentPage == 2 {
             btnContinuar.setTitle("Finalizar", for: .normal)
         }
-        contenedor.addSubview(vistas[pages.currentPage].view)
+        setNewView(iNewView: pages.currentPage)
     }
     
 }
